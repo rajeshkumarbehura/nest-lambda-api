@@ -1,0 +1,19 @@
+service: nest-lambda-api
+
+frameworkVersion: '3'
+
+plugins:
+  - serverless-jetpack
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: ap-southeast-1 # or whatever your region is
+
+functions:
+  api:
+    handler: dist/awslambda.handler
+    events:
+      - http:
+          method: any
+          path: /{proxy+}
