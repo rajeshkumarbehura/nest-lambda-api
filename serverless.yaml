@@ -8,7 +8,14 @@ plugins:
 provider:
   name: aws
   runtime: nodejs20.x
+  stage: dev
   region: ap-southeast-1 # or whatever your region is
+  # update required memory for lambda upto 10GB
+  memorySize: 1024
+  timeout: 20
+  # define your S3 bucket for serverless code to be store
+  deploymentBucket:
+    name: dev-seller-lambda-code
 
 functions:
   api:
