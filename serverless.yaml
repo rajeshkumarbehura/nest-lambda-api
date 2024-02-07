@@ -19,7 +19,9 @@ provider:
 
 functions:
   api:
-    handler: dist/awslambda.handler
+    name: nestjs-aws-lambda-api
+    description: NestJS & Aws Lambda API
+    handler: dist/aws/lambda.handler
     events:
       - http:
           method: any

@@ -5,10 +5,14 @@
   "author": "",
   "private": true,
   "license": "UNLICENSED",
+  "engines": {
+    "npm": "10.4.0",
+    "node": "20.11.0"
+  },
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "nest start",
+    "start": "node dist/main && nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
@@ -25,7 +29,8 @@
     "@nestjs/platform-express": "^10.0.0",
     "@vendia/serverless-express": "^4.12.6",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "semver": "^7.6.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",
