@@ -9,12 +9,12 @@
  
 ## Description
 
-This project allows you to build APIs that can be deployed in AWS Lambda or dockerized for EKS or ECS.
+This project allows you to build APIs that can be deployed in AWS Lambda or dockerized for EKS(k8s) or ECS.
 
 If you are a small startup with a tight budget, you can use this project to easily build 
 and deploy APIs in AWS Lambda at the early stage of development. 
 You don’t have to worry about scaling or managing the infrastructure, 
-as AWS Lambda does it for you.
+as AWS Lambda does it for you. When api sizes increases, it's good to increase lambda memory(look into serverless.yml file)
 
 If you want to switch to Kubernetes later, 
 you can also dockerize your APIs and deploy them in EKS or ECS. 
